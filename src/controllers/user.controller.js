@@ -115,7 +115,7 @@ export const loginUser = asyncHandler(async (req, res) => {
   const { accessToken, refreshToken } = await generateAccessAndRefreshToken(
     user._id
   );
-  // console.log(refre`shToken);
+  // console.log(refreshToken);
 
   const loggedInUser = await User.findById(user._id).select(
     "-password -refreshToken"
